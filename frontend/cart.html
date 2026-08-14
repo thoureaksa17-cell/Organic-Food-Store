@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart &mdash; Organic</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">Organic</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn active" href="cart.html" aria-label="View cart">
+        🛒<span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container"><h1>Your Cart</h1></div>
+</section>
+
+<section class="section" style="padding-top:48px;">
+  <div class="container">
+    <div id="cart-content"><!-- rendered by cart.js --></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">&copy; 2026 Organic Food Shop. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/api.js"></script>
+<script src="js/cart-store.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

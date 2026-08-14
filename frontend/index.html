@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organic &mdash; Healthy Organic Food</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">Organic</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="cart.html" aria-label="View cart">
+        🛒<span class="cart-count" data-cart-count>0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <h1>Healthy<br>Organic<br>Food</h1>
+      <p>Farm-fresh produce, raw honey and pantry staples, delivered straight from small organic growers to your door.</p>
+      <a class="btn btn-primary" href="#products">Shop Now</a>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="70" cy="70" r="46" fill="#4f7a4f"/>
+        <circle cx="52" cy="60" r="22" fill="#5f8f5c"/>
+        <circle cx="90" cy="55" r="20" fill="#6ea368"/>
+        <circle cx="60" cy="90" r="20" fill="#436b43"/>
+        <circle cx="150" cy="120" r="32" fill="#2a4d34"/>
+        <path d="M20 150c30-8 40-30 40-30l-10 34z" fill="#5f8f5c"/>
+        <ellipse cx="145" cy="60" rx="10" ry="16" fill="#d94f3c" transform="rotate(-20 145 60)"/>
+        <circle cx="170" cy="150" r="6" fill="#8a5a2b"/>
+        <circle cx="182" cy="160" r="6" fill="#a8703a"/>
+        <circle cx="168" cy="165" r="6" fill="#b9834a"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-sub">Picked this morning, priced fairly, and packed with nothing but the real thing.</p>
+
+    <div class="product-grid" id="product-grid">
+      <!-- product cards injected by main.js -->
+    </div>
+
+    <div class="promo-grid">
+      <div class="promo-card veg">
+        <h3>Organic Vegetables</h3>
+        <p>Grown without pesticides, harvested at peak ripeness.</p>
+        <a class="btn btn-primary" style="width:fit-content;" href="#products">Shop Vegetables</a>
+      </div>
+      <div class="promo-card pantry">
+        <h3>Natural &amp; Healthy</h3>
+        <p>Pantry staples made the slow, honest way &mdash; honey, nuts and more.</p>
+        <a class="btn btn-outline" style="width:fit-content;" href="#products">Shop Pantry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About Us</h4>
+        <p>Organic connects small growers with your kitchen &mdash; fresh, seasonal, and honestly priced food, delivered.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Organic Food Shop. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/api.js"></script>
+<script src="js/cart-store.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

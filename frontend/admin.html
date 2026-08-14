@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin &mdash; Organic</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">Organic</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-outline hidden" id="logout-btn" style="padding:8px 18px;">Log out</button>
+    </div>
+  </div>
+</header>
+
+<!-- Login form -->
+<section class="section" id="login-view">
+  <div class="container">
+    <h2 class="section-title">Admin Login</h2>
+    <form class="form-card" id="login-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" value="admin" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="organic123" required>
+      </div>
+      <div class="form-error hidden" id="login-error"></div>
+      <button class="btn btn-primary" type="submit" style="width:100%;">Log In</button>
+    </form>
+  </div>
+</section>
+
+<!-- Admin dashboard -->
+<div class="admin-shell hidden" id="admin-view">
+  <aside class="admin-sidebar">
+    <button data-tab="products" class="active">Products</button>
+    <button data-tab="orders">Orders</button>
+  </aside>
+  <main class="admin-main">
+
+    <section id="tab-products">
+      <h2>Products</h2>
+
+      <form class="form-card" id="product-form" style="max-width:100%; margin-bottom:32px;">
+        <input type="hidden" id="product-id">
+        <div class="field">
+          <label for="p-name">Name</label>
+          <input id="p-name" required>
+        </div>
+        <div class="field">
+          <label for="p-price">Price ($)</label>
+          <input id="p-price" type="number" step="0.01" min="0" required>
+        </div>
+        <div class="field">
+          <label for="p-unit">Unit (e.g. basket, jar, head)</label>
+          <input id="p-unit" required>
+        </div>
+        <div class="field">
+          <label for="p-category">Category</label>
+          <input id="p-category" placeholder="vegetable / pantry / other">
+        </div>
+        <div class="field">
+          <label for="p-icon">Icon</label>
+          <select id="p-icon">
+            <option value="tomato">Tomato</option>
+            <option value="honey">Honey</option>
+            <option value="broccoli">Broccoli</option>
+            <option value="nuts">Nuts</option>
+            <option value="avocado">Avocado</option>
+            <option value="spinach">Spinach</option>
+            <option value="leaf">Leaf (generic)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="p-stock">Stock</label>
+          <input id="p-stock" type="number" min="0" value="0">
+        </div>
+        <div class="field">
+          <label for="p-description">Description</label>
+          <textarea id="p-description" rows="2"></textarea>
+        </div>
+        <div class="form-error hidden" id="product-error"></div>
+        <button class="btn btn-primary" type="submit" id="product-submit-btn">Add Product</button>
+        <button class="btn btn-outline hidden" type="button" id="product-cancel-btn">Cancel Edit</button>
+      </form>
+
+      <table class="admin-table">
+        <thead>
+          <tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="product-table-body"></tbody>
+      </table>
+    </section>
+
+    <section id="tab-orders" class="hidden">
+      <h2>Orders</h2>
+      <table class="admin-table">
+        <thead>
+          <tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="order-table-body"></tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
